@@ -5,15 +5,10 @@ public class Solution {
         foreach(int num in nums)
         {
             if(dic.ContainsKey(num))
-            {
                 dic[num] = dic[num]+1;
-            }
             else
-            {
                 dic.Add(num,1);
-            }
         }
-
         return dic.OrderByDescending(e => e.Value).First().Key;
     }
 }
