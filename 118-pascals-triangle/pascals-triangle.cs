@@ -14,7 +14,6 @@ public class Solution {
             }
             result.Add(tempList);
         }
-
         return result;
     }
 }
