@@ -10,18 +10,15 @@ public class Solution {
                 matrix[i][j] = matrix[j][i];
                 matrix[j][i] =val;
             }
-        }
 
-        for(int i=0;i<n;++i)
-        {
-            int j=0;
+            int m=0;
             int k=n-1;
-            while(j<k)
+            while(m<k)
             {
-                int val = matrix[i][j];
-                matrix[i][j] = matrix[i][k];
+                int val = matrix[i][m];
+                matrix[i][m] = matrix[i][k];
                 matrix[i][k] = val;
-                j++;
+                m++;
                 k--;
             }
         }
