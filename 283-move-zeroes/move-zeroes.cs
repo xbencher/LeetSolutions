@@ -4,9 +4,7 @@ public class Solution {
         int i =0;
         int inext =1;
         int n = nums.Length;
-
         if(n == 1) return ;
-
         while(i < n && inext < n)
         {
             if(nums[i]==0 && nums[inext] != 0)
