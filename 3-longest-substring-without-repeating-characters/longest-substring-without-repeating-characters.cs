@@ -10,13 +10,10 @@ public class Solution {
                 set.Remove(s[l]);
                 ++l;
             }
-
             set.Add(s[r]);
             int len = r-l+1;
             maxSub = Math.Max(len, maxSub);
-
         }
-
         return maxSub;
     }
 }
