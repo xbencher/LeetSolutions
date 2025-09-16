@@ -8,7 +8,6 @@
  */
 public class Solution {
     public void DeleteNode(ListNode node) {
-        ListNode tempNode = node;
         while(node != null)
         {
             if(node.next != null)
