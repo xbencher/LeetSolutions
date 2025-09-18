@@ -11,16 +11,15 @@
  */
 public class Solution {
     public bool HasCycle(ListNode head) {
-        HashSet<ListNode> dict = new HashSet<ListNode>();
+        ListNode slow = head;
+        ListNode fast = head;
 
-        ListNode dummy = head;
-        
-        while(dummy != null)
+        while(fast != null && fast.next != null)
         {
-            if(dict.Contains(dummy)) return true;
+            slow = slow.next;
+            fast = fast.next.next;
 
-            dict.Add(dummy);
-            dummy = dummy.next;
+            if(slow == fast) return true;
         }
 
         return false;
