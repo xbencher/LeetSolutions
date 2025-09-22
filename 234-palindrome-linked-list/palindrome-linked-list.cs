@@ -40,9 +40,10 @@ public class Solution {
     public ListNode ReverseList(ListNode head)
     {
         ListNode dummy = null;
+        ListNode nextNode = null;
         while(head != null)
         {
-            ListNode nextNode = head.next;
+            nextNode = head.next;
             head.next = dummy;
             dummy = head;
             head =nextNode;
