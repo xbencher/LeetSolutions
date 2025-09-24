@@ -30,11 +30,11 @@ public class Solution {
                     ptr1 = ptr1.next;
                     ptr2 = ptr2.next;
                 }
-                return ptr1; // Start of cycle
+                return ptr1;
             }
         }
 
-        return null; // No cycle
+        return null;
 
     }
 }
