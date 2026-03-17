@@ -1,35 +1,33 @@
 public class Solution {
     public bool IsAnagram(string s, string t) {
-
-        Dictionary<char,int> dic = new Dictionary<char,int>(); 
+        Dictionary<char,int> map = new Dictionary<char,int>();
 
         if(s.Length != t.Length) return false;
-        
-        foreach(char c in s)
+
+        foreach(var element in s)
         {
-            if(dic.ContainsKey(c))
+            if(map.ContainsKey(element))
             {
-                dic[c] += 1; 
+                map[element] += 1;
             }
             else
             {
-                dic.Add(c,1);
+                 map.Add(element,1);
             }
         }
 
-        foreach(char c in t)
+        foreach(var element in t)
         {
-            if(dic.ContainsKey(c))
+            if(map.ContainsKey(element))
             {
-                if(dic[c] <= 0) return false;
-                else dic[c] -=1;
+                if(map[element] == 0) return false;
+                map[element] -= 1;
             }
             else
             {
                 return false;
             }
         }
-
 
         return true;
     }
