@@ -1,23 +1,22 @@
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
-        
-        var dict = new Dictionary<int,int>();
 
-        for(int i=0; i< nums.Length;++i)
+     Dictionary<int,int> dict = new Dictionary<int,int>();
+
+     for(int i = 0; i<nums.Length;++i)
+     {
+        int remaingVal = target-nums[i];
+        if(dict.ContainsKey(remaingVal))
         {
-            var com = target-nums[i];
-           
-            if(dict.ContainsKey(com))
-            {
-                return new int[] {dict[com],i};
-            }
-
-            if(!dict.ContainsKey(nums[i]))
-            {
-                dict[nums[i]] = i;
-            }
+            return new int[] {dict[remaingVal],i};
         }
+        else
+        {
+            if(!dict.ContainsKey(nums[i])) dict.Add(nums[i],i);
+            
+        }
+     }   
 
-        return new int[] {-1,-1};
+     return new int[] {0,0};
     }
 }
