@@ -12,7 +12,8 @@ public class Solution {
         }
         else
         {
-            if(!dict.ContainsKey(nums[i])) dict.Add(nums[i],i);
+            dict[nums[i]] =i;
+            //if(!dict.ContainsKey(nums[i])) dict.Add(nums[i],i);
             
         }
      }   
