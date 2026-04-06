@@ -1,14 +1,23 @@
 public class Solution {
     public int[] TwoSum(int[] numbers, int target) {
-        int i=0;
-        int n = numbers.Length-1;
-        while(i<n)
-        {
-            int sum =  numbers[i]+numbers[n];
+        int p1 = 0;
+        int p2 = numbers.Length-1;
 
-            if(sum == target) return new int[]{i+1,n+1};
-            else if(sum > target) --n;
-            else ++i;
+        while(p1<p2)
+        {
+            int val = numbers[p1]+numbers[p2];
+            
+            if(target == val) return new int[] {p1+1,p2+1};
+
+            if(target > val)
+            {
+                p1 +=1;
+            }
+            else
+            {
+                p2 -=1;
+            }
+
         }
 
         return new int[] {0,0};
