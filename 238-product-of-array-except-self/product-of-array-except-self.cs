@@ -2,8 +2,11 @@ public class Solution {
     public int[] ProductExceptSelf(int[] nums) {
         int alength = nums.Length;
         int[] ans = new int[alength]; 
-        Array.Fill(ans, 1);
-
+        
+        for(int i=0;i<alength;++i)
+        {
+            ans[i]=1;
+        }
         // fill prefix in array
         for(int i=1;i<alength;++i)
         {
